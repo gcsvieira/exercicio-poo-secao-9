@@ -10,7 +10,7 @@ public class App {
         BankAccount bankAccount;
         int idAccount;
         String nameAccount;
-        double accountBalance;
+        double initialDeposit;
 
         System.out.print("Enter account number: ");
         idAccount = Integer.parseInt(scan.nextLine());
@@ -19,8 +19,8 @@ public class App {
         System.out.print("Is there an initial deposit? (y/n): ");
         if (scan.nextLine().equals("y")) {
             System.out.print("Enter initial deposit value: ");
-            accountBalance = Double.parseDouble(scan.nextLine());
-            bankAccount = new BankAccount(idAccount, nameAccount, accountBalance);
+            initialDeposit = Double.parseDouble(scan.nextLine());
+            bankAccount = new BankAccount(idAccount, nameAccount, initialDeposit);
         } else {
             bankAccount = new BankAccount(idAccount, nameAccount);
         }

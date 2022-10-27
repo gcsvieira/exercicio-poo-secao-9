@@ -7,13 +7,10 @@ public class BankAccount extends BankOperations {
     private String nameAccount;
     private double bankBalanceAccount;
 
-    public BankAccount() {
-    }
-
-    public BankAccount(int idAccount, String nameAccount, double bankBalanceAccount) {
+    public BankAccount(int idAccount, String nameAccount, double initialDeposit) {
         this.idAccount = idAccount;
         this.nameAccount = nameAccount;
-        this.bankBalanceAccount = bankBalanceAccount;
+        deposit(initialDeposit);
     }
 
     public BankAccount(int idAccount, String nameAccount) {
